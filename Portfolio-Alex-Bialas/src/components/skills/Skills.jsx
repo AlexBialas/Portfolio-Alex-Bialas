@@ -1,5 +1,4 @@
 import React from "react";
-import hi from "../../assets/hi.jpeg";
 import ANGULAR from "../skills/ANGULAR.png";
 import BOOTSTRAP from "../skills/BOOTSTRAP.png";
 import CANVA from "../skills/CANVA.png";
@@ -47,6 +46,8 @@ const skills = [
 const Skills = () => {
   return (
     <section
+      data-aos="fade-left"
+      data-aos-delay="400"
       id="skills"
       className="relative overflow-hidden flex flex-col text-black body-font"
     >
