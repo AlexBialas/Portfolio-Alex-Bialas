@@ -74,7 +74,6 @@ const Skills = () => {
                 alt={skill.name}
                 className="rounded-full w-15 h-15 object-cover transition-transform transform hover:scale-110 shadow-lg"
               />
-              <p className="text-center mt-2 font-semibold">{skill.name}</p>
             </div>
           ))}
         </div>
