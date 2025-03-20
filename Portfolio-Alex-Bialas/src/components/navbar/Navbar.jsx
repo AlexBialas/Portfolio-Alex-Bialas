@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Navbar() {
   const listNavbar = [
@@ -20,15 +21,33 @@ export default function Navbar() {
             <a
               key={index}
               href={item.link}
-              className="mr-5 hover:text-yellow-300 hover:bg-beige transition duration-300"
+              className="mr-5 text-xl hover:bg-gray-200 hover:bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] transition duration-300 p-2 rounded-lg shadow hover:shadow-xl"
             >
               {item.name}
             </a>
           ))}
         </nav>
-        <button className="inline-flex items-center py-1 px-7 focus:outline-none text-base text-black mt-4 md:mt-0 border border-black hover:border-yellow-300 hover:bg-beige transition duration-300">
-          <a href="#contact">Contact Me</a>
-        </button>
+
+        <div className="flex space-x-4">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="transition-transform transform hover:scale-110"
+          >
+            <FaLinkedin size={30} className="text-black" />
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="transition-transform transform hover:scale-110"
+          >
+            <FaGithub size={30} className="text-black" />
+          </a>
+        </div>
       </div>
     </header>
   );

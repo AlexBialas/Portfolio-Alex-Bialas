@@ -9,15 +9,15 @@ export default function Footer() {
     { name: "Projects", link: "#projects" },
   ];
   return (
-    <footer className="bg-gray-700 rounded-lg shadow">
+    <footer className="bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f]  shadow">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-ms text-gray-200 sm:text-center">
-          2023{" "}
+        <span className="text-ms text-black sm:text-center">
+          Aleksandra Bialas{" "}
           <a href="#" className="hover:underline">
-            Portfolio.
+            2025
           </a>
         </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-100 sm:mt-0">
+        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-black  sm:mt-0">
           {listNavbar.map((item, index) => (
             <a
               key={index}

@@ -28,10 +28,17 @@ const Hero = () => {
               perferendis facere corporis, reiciendis modi architecto illum
               harum iusto! Ea, incidunt voluptate.
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center space-x-4">
               <a href={CV} download>
-                <button className="inline-flex text-white bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-[0_0_40px_rgba(255,165,0,0.7)] rounded-full text-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+                <button className="inline-flex items-center justify-center text-white bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+                  <span className="mr-2">📄</span>
                   Download CV
+                </button>
+              </a>
+              <a href="#contact">
+                <button className="inline-flex items-center justify-center text-white bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+                  <span className="mr-2">📬</span>
+                  Contact Me
                 </button>
               </a>
             </div>

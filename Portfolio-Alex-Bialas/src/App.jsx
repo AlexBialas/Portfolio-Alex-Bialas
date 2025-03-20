@@ -7,7 +7,6 @@ import Language from "./components/language/Language";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
-import SocialMediaIcons from "./components/socialMediaIcons/SocialMediaIcons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -26,7 +25,6 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-      <SocialMediaIcons />
     </main>
   );
 };
