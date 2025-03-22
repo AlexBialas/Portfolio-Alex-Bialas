@@ -1,15 +1,14 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
 import hi from "../../assets/hi.jpeg";
 import CV from "./CV.pdf";
 
 const Hero = () => {
-  const displayText = "Hello, I'm Aleksandra Bialas";
+  const displayText = "Hello! I'm Alex – a full-time code magician! 🪄💻";
 
   return (
     <div className="relative overflow-hidden min-h-[550px] sm:min-h-[660px] flex flex-col ">
       <div className="md:h-[720px] h-[960px] md:w-[640px] w-[880px] right-0 bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] absolute rounded-full transform rotate-12 -top-20 shadow-[0_0_40px_rgb(150, 120, 80, 0.7)]"></div>
-      <Navbar />
+
       <section
         data-aos="fade-up"
         data-aos-delay="250"
@@ -18,15 +17,23 @@ const Hero = () => {
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center relative">
             <h1 className="title-font sm:text-4xl text-4xl mb-4 font-bold text-black">
-              {" "}
               {displayText}
             </h1>
-            <p className="mb-8 leading-relaxed text-black">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-              distinctio pariatur quis itaque, ipsam incidunt saepe, ex nobis
-              perferendis facere corporis, reiciendis modi architecto illum
-              harum iusto! Ea, incidunt voluptate.
+            <p className="mb-4 leading-relaxed text-black text-lg max-w-2xl mx-auto text-left">
+              As a Full Stack Web Developer, I completed an intensive MERN stack
+              training at the Digital Career Institute. With a background in
+              project management from Merito University, I excel in planning and
+              resource allocation. My experience includes creating responsive
+              UIs during my internship at IdoMods and delivering high-quality
+              freelance projects that meet client needs.
+            </p>
+            <p className="mb-8 leading-relaxed text-black text-lg max-w-2xl mx-auto text-left">
+              I am fluent in English and German, and I speak a little Spanish,
+              just enough to order tacos! 🌮 Outside of coding, I enjoy
+              traveling, cooking, and motorcycle racing. <br />
+              <br />
+              Feel free to explore my portfolio, and{" "}
+              <strong>let’s create something amazing together! 🚀 </strong>
             </p>
             <div className="flex justify-center space-x-4">
               <a href={CV} download>

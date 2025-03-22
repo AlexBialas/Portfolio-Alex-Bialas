@@ -28,33 +28,33 @@ const Experience = () => {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-orange-500">
             Experience
           </h1>
-          <h2 className="title-font font-bold text-black sm:text-2xl">2025</h2>
+
+          <h2 className="title-font font-bold text-black sm:text-2xl">
+            Frontend Web Developer Practice
+          </h2>
           <p className="mb-8 text-black leading-relaxed">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            eveniet praesentium tenetur, culpa vel excepturi? Id nulla omnis
-            dolor praesentium nisi. Mollitia laboriosam, quis eligendi
-            perspiciatis nemo est officia maiores.
+            IdoMods | 09/2024 - 12/2024, Remote
+            <br />
+            • Gained hands-on experience in developing user-friendly web
+            applications using modern JavaScript frameworks and libraries.
+            <br />• Collaborated with designers to create responsive UI
+            components and ensure a seamless user experience.
+            <br />• Implemented RESTful APIs to connect front-end applications
+            with back-end services.
           </p>
-          <h2 className="title-font font-bold text-black sm:text-2xl">2025</h2>
+
+          <h2 className="title-font font-bold text-black sm:text-2xl">
+            Freelance Web Developer
+          </h2>
           <p className="mb-8 text-black leading-relaxed">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            eveniet praesentium tenetur, culpa vel excepturi? Id nulla omnis
-            dolor praesentium nisi. Mollitia laboriosam, quis eligendi
-            perspiciatis nemo est officia maiores.
-          </p>
-          <h2 className="title-font font-bold text-black sm:text-2xl">2025</h2>
-          <p className="mb-8 text-black leading-relaxed">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            eveniet praesentium tenetur, culpa vel excepturi? Id nulla omnis
-            dolor praesentium nisi. Mollitia laboriosam, quis eligendi
-            perspiciatis nemo est officia maiores.
-          </p>
-          <h2 className="title-font font-bold text-black sm:text-2xl">2025</h2>
-          <p className="mb-8 text-black leading-relaxed">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-            eveniet praesentium tenetur, culpa vel excepturi? Id nulla omnis
-            dolor praesentium nisi. Mollitia laboriosam, quis eligendi
-            perspiciatis nemo est officia maiores.
+            01/2023 - 03/2024, Remote
+            <br />
+            • Developed responsive frontend websites using the MERN stack, HTML,
+            CSS, JavaScript, and Tailwind CSS.
+            <br />• Worked closely with clients to understand their requirements
+            and deliver high-quality projects.
+            <br />• Focused on building user-friendly interfaces and optimizing
+            web performance.
           </p>
         </div>
       </div>

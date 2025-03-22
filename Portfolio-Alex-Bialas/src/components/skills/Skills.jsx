@@ -57,10 +57,31 @@ const Skills = () => {
             Skills
           </h1>
           <p className="leading-relaxed text-base mb-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            voluptatum obcaecati totam eum esse consectetur eligendi fugiat
-            ratione quaerat placeat ipsum, sapiente, aliquid exercitationem.
-            Quidem aliquam in omnis autem consequuntur!
+            My experience encompasses both frontend and backend development,
+            allowing me to seamlessly navigate between different layers of an
+            application.
+            <br />
+            <br />
+            In terms of frontend development, I utilize technologies such as
+            HTML, CSS, and JavaScript, along with popular frameworks like React
+            and Vue, which enable me to build interactive and responsive user
+            interfaces. I also employ tools like Tailwind CSS and Bootstrap to
+            ensure an aesthetically pleasing and functional design.
+            <br />
+            <br />
+            On the backend, I have experience working with Node.js and databases
+            such as MongoDB and MySQL, which allows me to create robust and
+            scalable server-side solutions. I am also skilled in using version
+            control tools like GitHub, facilitating collaboration within project
+            teams.
+            <br />
+            <br />
+            Additionally, I am familiar with design tools like Figma and Canva,
+            which help me communicate effectively with the design team and
+            create cohesive and visually appealing projects. My skill set also
+            includes working with platforms such as WordPress and Shopify,
+            expanding my capabilities in content creation and management on the
+            web.
           </p>
         </div>
       </div>
@@ -69,7 +90,6 @@ const Skills = () => {
         <div className="whitespace-nowrap animate-scroll">
           {skills.map((skill, index) => (
             <div key={index} className="inline-block p-4 mx-2">
-              {" "}
               <img
                 src={skill.src}
                 alt={skill.name}
