@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ANGULAR from "../skills/ANGULAR.png";
 import BOOTSTRAP from "../skills/BOOTSTRAP.png";
 import CANVA from "../skills/CANVA.png";
@@ -19,100 +19,169 @@ import TS from "../skills/TS.png";
 import VITE from "../skills/VITE.png";
 import VUE from "../skills/VUE.png";
 import WORDPRESS from "../skills/WORDPRESS.png";
+import EXPRESS from "../skills/EXPRESS.png";
+import DOCKER from "../skills/docker.png";
+import Lern from "../skills/lern.jpg";
+import Openmind from "../skills/openmind.jpg";
+import Communication from "../skills/communication.jpg";
 
-const skills = [
-  { src: HTML, name: "HTML" },
-  { src: CSS, name: "CSS" },
-  { src: JS, name: "JAVASCRIPT" },
-  { src: REACT, name: "REACT" },
-  { src: TAILWIND, name: "TAILWIND CSS" },
-  { src: BOOTSTRAP, name: "BOOTSTRAP" },
-  { src: ANGULAR, name: "ANGULAR" },
-  { src: REDUX, name: "REDUX" },
-  { src: NODE, name: "NODE.JS" },
-  { src: MONGODB, name: "MONGODB" },
-  { src: MYSQL, name: "MYSQL" },
-  { src: NEXT, name: "NEXT" },
-  { src: GITHUB, name: "GITHUB" },
-  { src: FIGMA, name: "FIGMA" },
-  { src: CANVA, name: "CANVA" },
-  { src: SHOPIFY, name: "SHOPIFY" },
-  { src: VITE, name: "VITE" },
-  { src: VUE, name: "VUE" },
-  { src: WORDPRESS, name: "WORDPRESS" },
-  { src: TS, name: "TYPESCRIPT" },
-];
+const skillsData = {
+  frontend: [
+    { src: HTML, name: "HTML" },
+    { src: CSS, name: "CSS" },
+    { src: JS, name: "JavaScript" },
+    { src: REACT, name: "React" },
+    { src: REDUX, name: "Redux" },
+    { src: VUE, name: "Vue" },
+    { src: ANGULAR, name: "Angular" },
+    { src: TS, name: "TypeScript" },
+    { src: TAILWIND, name: "Tailwind CSS" },
+    { src: BOOTSTRAP, name: "Bootstrap" },
+  ],
+  backend: [
+    { src: NODE, name: "Node.js" },
+    { src: NEXT, name: "Next.js" },
+    { src: EXPRESS, name: "Express.js" },
+  ],
+  database: [
+    { src: MONGODB, name: "MongoDB" },
+    { src: MYSQL, name: "MySQL" },
+  ],
+  ops: [
+    { src: GITHUB, name: "GitHub" },
+    { src: FIGMA, name: "Figma" },
+    { src: CANVA, name: "Canva" },
+    { src: SHOPIFY, name: "Shopify" },
+    { src: WORDPRESS, name: "WordPress" },
+    { src: VITE, name: "Vite" },
+    { src: DOCKER, name: "Docker" },
+  ],
+};
+
+const SkillCard = ({ skill }) => (
+  <div className="flex flex-col items-center justify-center w-40 h-40 mb-1 mx-0.5 bg-[#f0f0f0] rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-xl">
+    <div className="flex items-center justify-center w-24 h-24 mb-2 border-2 border-gray-200 rounded-full overflow-hidden ">
+      <img
+        src={skill.src}
+        alt={skill.name}
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <p className="font-semibold text-center text-lg">{skill.name}</p>
+  </div>
+);
+
+const SoftSkillCard = ({ title, description, imgSrc }) => (
+  <div className=" rounded-lg shadow-lg m-6 flex flex-col items-center transition-shadow duration-300 hover:shadow-xl h-150 w-250">
+    <img
+      src={imgSrc}
+      alt={title}
+      className="w-120 h-120 mb-9 p-9 rounded-[50px] transition-transform duration-300 transform hover:scale-105"
+    />
+    <h3 className="text-lg font-semibold hover:text-[#a68f5f]">{title}</h3>
+    <p className="text-gray-600 text-center">{description}</p>
+  </div>
+);
+
+const SoftSkills = () => {
+  const softSkills = [
+    {
+      id: 1,
+      title: "Non-stop learning",
+      description:
+        "Technology never stops updating, so those who work with technology must continuously update themselves.",
+      imgSrc: Lern,
+    },
+    {
+      id: 2,
+      title: "Communicative",
+      description:
+        "No matter your profession, communication is always essential in any field.",
+      imgSrc: Communication,
+    },
+    {
+      id: 3,
+      title: "Open-minded",
+      description:
+        "When working for others, it's important to accept new ideas from clients or team members.",
+      imgSrc: Openmind,
+    },
+  ];
+
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % softSkills.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentSkill = softSkills[currentSkillIndex];
+
+  return (
+    <div className="flex justify-center items-center mb-6">
+      <SoftSkillCard
+        title={currentSkill.title}
+        description={currentSkill.description}
+        imgSrc={currentSkill.imgSrc}
+      />
+    </div>
+  );
+};
 
 const Skills = () => {
   return (
     <section
-      data-aos="fade-left"
+      data-aos="fade-up"
       data-aos-delay="400"
       id="skills"
       className="relative overflow-hidden flex flex-col text-black body-font"
     >
       <div className="container flex flex-col items-center px-5 py-24 mx-auto">
         <div className="mb-10 text-center">
-          <h1 className="sm:text-4xl text-2xl font-bold title-font mb-2">
+          <h1 className="text-4xl font-bold text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
             Skills
           </h1>
-          <p className="leading-relaxed text-base mb-4">
-            My experience encompasses both frontend and backend development,
-            allowing me to seamlessly navigate between different layers of an
-            application.
-            <br />
-            <br />
-            In terms of frontend development, I utilize technologies such as
-            HTML, CSS, and JavaScript, along with popular frameworks like React
-            and Vue, which enable me to build interactive and responsive user
-            interfaces. I also employ tools like Tailwind CSS and Bootstrap to
-            ensure an aesthetically pleasing and functional design.
-            <br />
-            <br />
-            On the backend, I have experience working with Node.js and databases
-            such as MongoDB and MySQL, which allows me to create robust and
-            scalable server-side solutions. I am also skilled in using version
-            control tools like GitHub, facilitating collaboration within project
-            teams.
-            <br />
-            <br />
-            Additionally, I am familiar with design tools like Figma and Canva,
-            which help me communicate effectively with the design team and
-            create cohesive and visually appealing projects. My skill set also
-            includes working with platforms such as WordPress and Shopify,
-            expanding my capabilities in content creation and management on the
-            web.
-          </p>
         </div>
-      </div>
 
-      <div className="overflow-hidden w-full">
-        <div className="whitespace-nowrap animate-scroll">
-          {skills.map((skill, index) => (
-            <div key={index} className="inline-block p-4 mx-2">
-              <img
-                src={skill.src}
-                alt={skill.name}
-                className="rounded-full w-15 h-15 object-cover transition-transform transform hover:scale-110 shadow-lg"
-              />
+        <div className="mb-10 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
+            My Soft Skills
+          </h2>
+          <SoftSkills />
+        </div>
+
+        {Object.entries(skillsData).map(([category, skills]) => (
+          <div key={category} className="mb-12 w-full">
+            <h2 className="text-2xl font-bold mb-4 text-center capitalize hover:text-[#a68f5f]">
+              {category}
+            </h2>
+            <div className="overflow-hidden relative w-full max-w-[1000px] mx-auto">
+              <div className="whitespace-nowrap flex animate-scroll gap-6 ">
+                {skills.map((skill) => (
+                  <SkillCard key={skill.name} skill={skill} />
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        ))}
 
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(100%);
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
           }
-          100% {
-            transform: translateX(-100%);
+          .animate-scroll {
+            animation: scroll 20s linear infinite;
           }
-        }
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-        }
-      `}</style>
+        `}</style>
+      </div>
     </section>
   );
 };

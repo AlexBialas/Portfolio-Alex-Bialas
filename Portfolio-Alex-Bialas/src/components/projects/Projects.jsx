@@ -33,13 +33,39 @@ export default function Projects() {
       title: "Project 4",
       description: "Photo description for project",
     },
+    {
+      id: 5,
+      image: image,
+      title: "Project 5",
+      description: "Photo description for project",
+    },
+    {
+      id: 6,
+      image: image2,
+      title: "Project 6",
+      description: "Photo description for project",
+    },
+    {
+      id: 7,
+      image: image3,
+      title: "Project 7",
+      description: "Photo description for project",
+    },
+    {
+      id: 8,
+      image: image4,
+      title: "Project 8",
+      description: "Photo description for project",
+    },
   ];
+
   const settings = {
     dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+
     responsive: [
       {
         breakpoint: 780,
@@ -49,38 +75,43 @@ export default function Projects() {
       },
     ],
   };
+
   return (
     <section
       data-aos="fade-up"
       data-aos-delay="400"
       id="projects"
-      className="relative overflow-hidden flex flex-col text-white body-font"
+      className="relative overflow-hidden flex flex-col text-black body-font"
     >
       <div className="container px-5 py-24 mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
-        <Slider {...settings}>
-          {listProjects.map((project) => {
-            return (
-              <div key={project.id} className="p-4">
-                <div className="h-full border-2 border-orange-400 shadow-[0_0_15px_rgba(255,165,0,0.7)] border-opacity-60 rounded-lg overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-auto lg:h-48 md:h-36 sm:h-24 object-cover object-center"
-                  />
-                  <div className="p-6">
-                    <h2 className="tracking-widest text-xl title-font font-medium text-gray-400 mb-1">
-                      {project.title}
-                    </h2>
-                    <p className="leading-relaxed mb-3">
-                      {project.description}
-                    </p>
+        <h1 className="text-4xl text-center font-black text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
+          My Projects
+        </h1>
+        <div className="relative">
+          <Slider {...settings}>
+            {listProjects.map((project) => {
+              return (
+                <div key={project.id} className="p-4">
+                  <div className="h-full border-2 border-black shadow-2xl rounded-lg overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-auto lg:h-48 md:h-36 sm:h-24 object-cover object-center"
+                    />
+                    <div className="p-6">
+                      <h2 className="tracking-widest text-xl title-font font-medium text-black mb-1">
+                        {project.title}
+                      </h2>
+                      <p className="leading-relaxed mb-3">
+                        {project.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </Slider>
+              );
+            })}
+          </Slider>
+        </div>
       </div>
     </section>
   );

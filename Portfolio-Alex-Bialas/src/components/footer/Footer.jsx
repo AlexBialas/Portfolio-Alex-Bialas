@@ -9,7 +9,7 @@ export default function Footer() {
     { name: "Projects", link: "#projects" },
   ];
   return (
-    <footer className="bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f]  shadow">
+    <footer className="bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] shadow">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-ms text-black sm:text-center">
           Aleksandra Bialas{" "}
@@ -17,12 +17,12 @@ export default function Footer() {
             2025
           </a>
         </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-black  sm:mt-0">
+        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-black sm:mt-0">
           {listNavbar.map((item, index) => (
             <a
               key={index}
               href={item.link}
-              className="hover:text-orange-400 me-4 md:me-6"
+              className="hover:text-[#ffffff]  transition-colors duration-300 ease-in-out me-4 md:me-6 px-2 py-1 rounded"
             >
               {item.name}
             </a>

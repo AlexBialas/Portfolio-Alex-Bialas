@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Hero from "./components/hero/Hero";
 import Skills from "./components/skills/Skills";
-import Education from "./components/Education/Education";
 import Experience from "./components/experience/Experience";
 import Language from "./components/language/Language";
 import Projects from "./components/projects/Projects";
@@ -31,7 +30,7 @@ const App = () => {
     <main
       className={`min-h-screen ${
         darkMode
-          ? "bg-gray-800 text-white"
+          ? "bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-white p-4"
           : "bg-gradient-to-r from-[#f5f0e1] to-[#d9c9a2]"
       }`}
     >
@@ -40,14 +39,13 @@ const App = () => {
         toggleDarkMode={toggleDarkMode}
         toggleLanguage={toggleLanguage}
       />
-      <Hero />
-      <Skills />
-      <Education />
-      <Experience />
-      <Language />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Hero darkMode={darkMode} />
+      <Skills darkMode={darkMode} />
+      <Experience darkMode={darkMode} />
+      <Language darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
+      <Contact darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </main>
   );
 };
