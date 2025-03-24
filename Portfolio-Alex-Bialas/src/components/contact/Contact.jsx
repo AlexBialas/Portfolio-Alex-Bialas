@@ -7,7 +7,11 @@ export default function Contact() {
         <h1 className="text-4xl font-black text-center text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
           Contact Me
         </h1>
-        <form action="#" className="space-y-8">
+        <form
+          action="https://formsubmit.io/send/aleksandrabialas94@gmail.com"
+          method="POST"
+          className="space-y-8"
+        >
           <div>
             <label
               for="email"

@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden flex flex-col text-black body-font"
+      className="relative overflow-hidden flex flex-col text-white body-font" // Zmiana na text-white
     >
       <div className="absolute top-[100px] left-64 inset-x-0 flex items-start justify-center"></div>
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -21,14 +21,18 @@ const Experience = () => {
           data-aos-delay="400"
           className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center"
         >
-          <h1 className="text-4xl font-black text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
+          <h1 className="text-4xl font-black leading-snug mb-6 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
             Experience
           </h1>
 
-          <h2 className="title-font font-bold text-black sm:text-2xl mb-2">
+          <h2 className="title-font font-bold text-white sm:text-2xl mb-2">
+            {" "}
+            {/* Zmiana na text-white */}
             Frontend Web Developer Practice
           </h2>
-          <p className="mb-8 text-black leading-relaxed p-4 shadow-md rounded-lg">
+          <p className="mb-8 text-white leading-relaxed p-4 shadow-md rounded-lg">
+            {" "}
+            {/* Zmiana na text-white */}
             IdoMods | 09/2024 - 12/2024, Remote
             <br />
             • Gained hands-on experience in developing user-friendly web
@@ -40,10 +44,14 @@ const Experience = () => {
             with back-end services.
           </p>
 
-          <h2 className="title-font font-bold text-black sm:text-2xl mb-2">
+          <h2 className="title-font font-bold text-white sm:text-2xl mb-2">
+            {" "}
+            {/* Zmiana na text-white */}
             Freelance Web Developer
           </h2>
-          <p className="mb-8 text-black leading-relaxed p-4 shadow-md rounded-lg">
+          <p className="mb-8 text-white leading-relaxed p-4 shadow-md rounded-lg">
+            {" "}
+            {/* Zmiana na text-white */}
             01/2023 - 03/2024, Remote
             <br />
             • Developed responsive frontend websites using the MERN stack, HTML,

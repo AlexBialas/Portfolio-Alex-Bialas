@@ -1,7 +1,7 @@
 import React from "react";
 import engImage from "../language/eng.png";
 
-export default function Language() {
+export default function Language({ isDarkMode }) {
   const languages = [
     { code: "En", name: "English", level: "C1", image: engImage },
     { code: "De", name: "German", level: "C1", image: engImage },
@@ -14,12 +14,16 @@ export default function Language() {
       id="language"
       data-aos="fade-up"
       data-aos-delay="400"
-      className="flex flex-col items-center justify-center mt-11 h-[300px] text-blue-950"
+      className={`flex flex-col items-center justify-center mt-11 h-[300px] ${
+        isDarkMode ? "text-white" : "text-blue-950"
+      }`}
     >
-      {" "}
-      <h1 className="text-4xl text-center font-black text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
-        {" "}
-        Languages{" "}
+      <h1
+        className={`text-4xl text-center font-black ${
+          isDarkMode ? "text-white" : "text-gray-900"
+        } leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105`}
+      >
+        Languages
       </h1>
       <div className="grid grid-cols-2 gap-10 md:flex md:gap-20">
         {languages.map((language, index) => (
@@ -46,10 +50,18 @@ export default function Language() {
                 </div>
               )}
             </div>
-            <span className="text-xl md:text-xl text-black">
+            <span
+              className={`text-xl md:text-xl ${
+                isDarkMode ? "text-white" : "text-black"
+              }`}
+            >
               {language.name}
             </span>
-            <span className="text-[#9a6e3d] text-lg md:text-xl font-bold">
+            <span
+              className={`text-[#9a6e3d] text-lg md:text-xl font-bold ${
+                isDarkMode ? "text-white" : ""
+              }`}
+            >
               {language.level}
             </span>
           </div>
