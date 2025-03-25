@@ -61,12 +61,12 @@ const skillsData = {
 const SkillCard = ({ skill, darkMode }) => (
   <div
     className={`flex flex-col items-center justify-center w-40 h-40 mb-1 mx-0.5 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-xl ${
-      darkMode ? "bg-gray-700" : "bg-[#f0f0f0]"
+      darkMode ? "bg-gray-700" : "bg-[#eaeaea]/20"
     }`}
   >
     <div
-      className={`flex items-center justify-center w-24 h-24 mb-2 border-2 rounded-full overflow-hidden ${
-        darkMode ? "border-gray-600" : "border-gray-200"
+      className={`flex items-center justify-center w-24 h-24 mb-2  overflow-hidden ${
+        darkMode ? "border-gray-600" : "border-gray-300"
       }`}
     >
       <img
@@ -88,7 +88,7 @@ const SkillCard = ({ skill, darkMode }) => (
 const SoftSkillCard = ({ title, description, imgSrc, darkMode }) => (
   <div
     className={`rounded-lg shadow-lg m-6 flex flex-col items-center transition-shadow duration-300 hover:shadow-xl h-150 w-250 ${
-      darkMode ? "bg-gray-800" : "bg-white"
+      darkMode ? "bg-gray-800" : "bg-white/20"
     }`}
   >
     <img
@@ -143,7 +143,7 @@ const SoftSkills = ({ darkMode }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSkillIndex((prevIndex) => (prevIndex + 1) % softSkills.length);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -227,7 +227,7 @@ const Skills = ({ darkMode }) => {
             }
           }
           .animate-scroll {
-            animation: scroll 20s linear infinite;
+            animation: scroll 15s linear infinite;
           }
         `}</style>
       </div>
