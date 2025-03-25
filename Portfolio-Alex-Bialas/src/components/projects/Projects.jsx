@@ -7,65 +7,89 @@ import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.png";
 
-export default function Projects() {
-  const listProjects = [
+export default function Projects({ darkMode }) {
+  const frontendProjects = [
     {
       id: 1,
       image: image,
-      title: "Project 1",
-      description: "Photo description for project",
+      title: "Frontend Project 1",
+      description: "Description for frontend project 1",
     },
     {
       id: 2,
       image: image2,
-      title: "Project 2",
-      description: "Photo description for project",
+      title: "Frontend Project 2",
+      description: "Description for frontend project 2",
     },
     {
       id: 3,
       image: image3,
-      title: "Project 3",
-      description: "Photo description for project",
+      title: "Frontend Project 3",
+      description: "Description for frontend project 3",
     },
     {
       id: 4,
       image: image4,
-      title: "Project 4",
-      description: "Photo description for project",
-    },
-    {
-      id: 5,
-      image: image,
-      title: "Project 5",
-      description: "Photo description for project",
-    },
-    {
-      id: 6,
-      image: image2,
-      title: "Project 6",
-      description: "Photo description for project",
-    },
-    {
-      id: 7,
-      image: image3,
-      title: "Project 7",
-      description: "Photo description for project",
-    },
-    {
-      id: 8,
-      image: image4,
-      title: "Project 8",
-      description: "Photo description for project",
+      title: "Frontend Project 4",
+      description: "Description for frontend project 4",
     },
   ];
+
+  const fullstackProjects = [
+    {
+      id: 1,
+      image: image,
+      title: "Full-stack Project 1",
+      description: "Description for full-stack project 1",
+    },
+    {
+      id: 2,
+      image: image2,
+      title: "Full-stack Project 2",
+      description: "Description for full-stack project 2",
+    },
+    {
+      id: 3,
+      image: image3,
+      title: "Full-stack Project 3",
+      description: "Description for full-stack project 3",
+    },
+    {
+      id: 4,
+      image: image4,
+      title: "Full-stack Project 4",
+      description: "Description for full-stack project 4",
+    },
+  ];
+
+  const customArrowStyle = {
+    width: "40px",
+    height: "40px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "black",
+    fontSize: "24px",
+    zIndex: 1,
+    cursor: "pointer",
+  };
 
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-
+    nextArrow: (
+      <div style={{ ...customArrowStyle }} className="custom-arrow right-arrow">
+        ➡️
+      </div>
+    ),
+    prevArrow: (
+      <div style={{ ...customArrowStyle }} className="custom-arrow left-arrow">
+        ⬅️
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 780,
@@ -76,41 +100,63 @@ export default function Projects() {
     ],
   };
 
+  const renderSlider = (projects, category, aosDirection) => (
+    <div className="relative">
+      <h2 className="text-3xl text-center font-black leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
+        {category}
+      </h2>
+      <Slider {...settings}>
+        {projects.map((project) => (
+          <div key={project.id} className="p-4" data-aos={aosDirection}>
+            <div
+              className={`h-full border-2 ${
+                darkMode ? "border-white" : "border-black"
+              } shadow-2xl rounded-lg overflow-hidden transition-transform transform hover:scale-105`}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto lg:h-48 md:h-36 sm:h-24 object-cover object-center"
+              />
+              <div className={`p-4 ${darkMode ? "bg-gray-700" : "bg-white"}`}>
+                <h2
+                  className={`tracking-widest text-xl title-font font-medium mb-1  ${
+                    darkMode ? "text-white" : "text-black"
+                  }`}
+                >
+                  {project.title}
+                </h2>
+                <p
+                  className={`leading-relaxed mb-3 ${
+                    darkMode ? "text-gray-300" : "text-black"
+                  }`}
+                >
+                  {project.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+
   return (
     <section
       data-aos="fade-up"
       data-aos-delay="400"
       id="projects"
-      className="relative overflow-hidden flex flex-col text-black body-font"
+      className={`relative overflow-hidden flex flex-col body-font ${
+        darkMode ? " text-white" : " text-black"
+      }`}
     >
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-4xl text-center font-black text-gray-900 leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
+        <h1 className="text-4xl text-center font-black leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105 p-4">
           My Projects
         </h1>
-        <div className="relative">
-          <Slider {...settings}>
-            {listProjects.map((project) => {
-              return (
-                <div key={project.id} className="p-4">
-                  <div className="h-full border-2 border-black shadow-2xl rounded-lg overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-auto lg:h-48 md:h-36 sm:h-24 object-cover object-center"
-                    />
-                    <div className="p-6">
-                      <h2 className="tracking-widest text-xl title-font font-medium text-black mb-1">
-                        {project.title}
-                      </h2>
-                      <p className="leading-relaxed mb-3">
-                        {project.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </Slider>
+        {renderSlider(frontendProjects, "Frontend Projects", "fade-left")}
+        <div className="pt-12">
+          {renderSlider(fullstackProjects, "Full-stack Projects", "fade-right")}
         </div>
       </div>
     </section>
