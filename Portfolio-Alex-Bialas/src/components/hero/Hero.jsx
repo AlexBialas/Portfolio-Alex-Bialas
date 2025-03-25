@@ -82,7 +82,7 @@ const Hero = ({ darkMode }) => {
                 <button
                   className={`inline-flex items-center justify-center ${
                     darkMode
-                      ? "bg-gray-700 text-white"
+                      ? "bg-gradient-to-r from-gray-800 to-gray-600 shadow-lg text-white p-4"
                       : "bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] text-black"
                   } border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer`}
                 >
@@ -93,7 +93,7 @@ const Hero = ({ darkMode }) => {
                 <button
                   className={`inline-flex items-center justify-center ${
                     darkMode
-                      ? "bg-gray-700 text-white"
+                      ? "bg-gradient-to-r from-gray-800 to-gray-600 shadow-lg text-white p-4"
                       : "bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f]"
                   } border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer`}
                 >

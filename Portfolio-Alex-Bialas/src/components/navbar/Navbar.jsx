@@ -14,7 +14,7 @@ export default function Navbar({ darkMode, toggleDarkMode, toggleLanguage }) {
     <header data-aos="fade-down" className="body-font z-10">
       <div
         className={`container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ${
-          darkMode ? "text-white" : "text-black"
+          darkMode ? "text-white " : "text-black"
         }`}
       >
         <a className="flex title-font font-medium items-center mb-4 md:mb-0">
@@ -27,7 +27,7 @@ export default function Navbar({ darkMode, toggleDarkMode, toggleLanguage }) {
               href={item.link}
               className={`mr-5 text-xl transition duration-300 p-2 rounded-lg shadow ${
                 darkMode
-                  ? "hover:bg-gray-600 hover:bg-gradient-to-r from-[#4a4a4a] via-[#5a5a5a] to-[#6a6a6a]"
+                  ? "bg-gradient-to-r from-gray-800 to-gray-600 shadow-lg text-white p-2 hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl"
                   : "hover:bg-gray-200 hover:bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f]"
               }`}
             >
