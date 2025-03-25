@@ -1,11 +1,13 @@
 import React from "react";
 import ExperienceImage from "../experience/experience.jpg";
 
-const Experience = () => {
+const Experience = ({ darkMode }) => {
   return (
     <section
       id="experience"
-      className="relative overflow-hidden flex flex-col text-white body-font" // Zmiana na text-white
+      className={`relative overflow-hidden flex flex-col body-font ${
+        darkMode ? "text-white" : "text-black"
+      }`}
     >
       <div className="absolute top-[100px] left-64 inset-x-0 flex items-start justify-center"></div>
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -25,14 +27,14 @@ const Experience = () => {
             Experience
           </h1>
 
-          <h2 className="title-font font-bold text-white sm:text-2xl mb-2">
-            {" "}
-            {/* Zmiana na text-white */}
+          <h2 className="title-font font-bold sm:text-2xl mb-2 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
             Frontend Web Developer Practice
           </h2>
-          <p className="mb-8 text-white leading-relaxed p-4 shadow-md rounded-lg">
-            {" "}
-            {/* Zmiana na text-white */}
+          <p
+            className={`mb-8 leading-relaxed p-4 shadow-md rounded-lg ${
+              darkMode ? "bg-gray-800" : ""
+            }`}
+          >
             IdoMods | 09/2024 - 12/2024, Remote
             <br />
             • Gained hands-on experience in developing user-friendly web
@@ -44,14 +46,14 @@ const Experience = () => {
             with back-end services.
           </p>
 
-          <h2 className="title-font font-bold text-white sm:text-2xl mb-2">
-            {" "}
-            {/* Zmiana na text-white */}
+          <h2 className="title-font font-bold sm:text-2xl mb-2 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
             Freelance Web Developer
           </h2>
-          <p className="mb-8 text-white leading-relaxed p-4 shadow-md rounded-lg">
-            {" "}
-            {/* Zmiana na text-white */}
+          <p
+            className={`mb-8 leading-relaxed p-4 shadow-md rounded-lg ${
+              darkMode ? "bg-gray-800" : ""
+            }`}
+          >
             01/2023 - 03/2024, Remote
             <br />
             • Developed responsive frontend websites using the MERN stack, HTML,
