@@ -102,7 +102,13 @@ export default function Projects({ darkMode }) {
 
   const renderSlider = (projects, category, aosDirection) => (
     <div className="relative">
-      <h2 className="text-3xl text-center font-black leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105">
+      <h2
+        className={`text-3xl text-center font-black leading-snug mb-6 transition-all duration-300 ease-in-out transform hover:scale-105 ${
+          darkMode
+            ? "text-white hover:text-gray-400"
+            : "text-gray-900 hover:text-[#a68f5f]"
+        }`}
+      >
         {category}
       </h2>
       <Slider {...settings}>
@@ -120,8 +126,8 @@ export default function Projects({ darkMode }) {
               />
               <div className={`p-4 ${darkMode ? "bg-gray-700" : "bg-white"}`}>
                 <h2
-                  className={`tracking-widest text-xl title-font font-medium mb-1  ${
-                    darkMode ? "text-white" : "text-black"
+                  className={`tracking-widest text-xl title-font font-medium mb-1 ${
+                    darkMode ? "text-white" : "text-gray-900"
                   }`}
                 >
                   {project.title}
@@ -151,7 +157,13 @@ export default function Projects({ darkMode }) {
       }`}
     >
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-4xl text-center font-black leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105 p-4">
+        <h1
+          className={`text-4xl text-center font-black leading-snug mb-6 transition-all duration-300 ease-in-out transform hover:scale-105 ${
+            darkMode
+              ? "text-white hover:text-gray-400"
+              : "text-gray-900 hover:text-[#a68f5f]"
+          }`}
+        >
           My Projects
         </h1>
         {renderSlider(frontendProjects, "Frontend Projects", "fade-left")}

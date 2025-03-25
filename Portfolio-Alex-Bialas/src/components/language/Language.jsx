@@ -20,7 +20,9 @@ export default function Language({ darkMode }) {
     >
       <h1
         className={`text-4xl text-center font-black ${
-          darkMode ? "text-white" : "text-gray-900"
+          darkMode
+            ? "text-white hover:text-gray-400"
+            : "text-gray-900 hover:text-[#a68f5f]"
         } leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105`}
       >
         Languages

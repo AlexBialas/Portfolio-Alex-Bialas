@@ -100,14 +100,14 @@ const SoftSkillCard = ({ title, description, imgSrc, darkMode }) => (
     />
     <h3
       className={`text-lg font-semibold hover:text-[#a68f5f] ${
-        darkMode ? "text-white" : "text-black"
+        darkMode
+          ? "text-white hover:text-gray-400"
+          : "text-gray-900 hover:text-[#a68f5f]"
       }`}
     >
       {title}
     </h3>
-    <p
-      className={`text-center ${darkMode ? "text-gray-400" : "text-gray-600"}`}
-    >
+    <p className={`text-center ${darkMode ? "text-white " : "text-gray-900 "}`}>
       {description}
     </p>
   </div>
@@ -176,7 +176,9 @@ const Skills = ({ darkMode }) => {
         <div className="mb-10 text-center">
           <h1
             className={`text-4xl font-bold leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105 ${
-              darkMode ? "text-white" : "text-gray-900"
+              darkMode
+                ? "text-white hover:text-gray-400"
+                : "text-gray-900 hover:text-[#a68f5f]"
             }`}
           >
             Skills
@@ -185,8 +187,10 @@ const Skills = ({ darkMode }) => {
 
         <div className="mb-10 text-center">
           <h2
-            className={`text-2xl font-bold leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105 ${
-              darkMode ? "text-white" : "text-gray-900"
+            className={`text-2xl font-bold leading-snug mb-6  transition-all duration-300 ease-in-out transform hover:scale-105 ${
+              darkMode
+                ? "text-white hover:text-gray-400"
+                : "text-gray-900 hover:text-[#a68f5f]"
             }`}
           >
             My Soft Skills
@@ -198,7 +202,9 @@ const Skills = ({ darkMode }) => {
           <div key={category} className="mb-12 w-full">
             <h2
               className={`text-2xl font-bold mb-4 text-center capitalize hover:text-[#a68f5f] ${
-                darkMode ? "text-white" : "text-gray-900"
+                darkMode
+                  ? "text-white hover:text-gray-400"
+                  : "text-gray-900 hover:text-[#a68f5f]"
               }`}
             >
               {category}
