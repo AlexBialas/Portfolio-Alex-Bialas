@@ -5,11 +5,17 @@ export default function Contact({ darkMode }) {
     <section id="contact" data-aos="fade-up" data-aos-delay="400">
       <div
         className={`py-8 lg:py-16 mx-auto max-w-screen-md ${
-          darkMode ? " text-white" : " text-black"
+          darkMode
+            ? "text-white hover:text-gray-400"
+            : "text-gray-900 hover:text-[#a68f5f]"
         }`}
       >
         <h1
-          className={`text-4xl font-black text-center leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105`}
+          className={`text-4xl font-black text-center leading-snug mb-6 ${
+            darkMode
+              ? "text-white hover:text-gray-400"
+              : "text-gray-900 hover:text-[#a68f5f]"
+          } transition-all duration-300 ease-in-out transform hover:scale-105`}
         >
           Contact Me
         </h1>

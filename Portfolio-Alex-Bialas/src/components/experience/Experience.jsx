@@ -23,11 +23,23 @@ const Experience = ({ darkMode }) => {
           data-aos-delay="400"
           className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center"
         >
-          <h1 className="text-4xl font-black leading-snug mb-6 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
+          <h1
+            className={`text-4xl font-black leading-snug mb-6 ${
+              darkMode
+                ? "text-white hover:text-gray-400"
+                : "text-gray-900 hover:text-[#a68f5f]"
+            } transition-colors duration-300 ease-in-out transform hover:scale-105`}
+          >
             Experience
           </h1>
 
-          <h2 className="title-font font-bold sm:text-2xl mb-2 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
+          <h2
+            className={`title-font font-bold sm:text-2xl mb-2 ${
+              darkMode
+                ? "text-white hover:text-gray-400"
+                : "text-gray-900 hover:text-[#a68f5f]"
+            } transition-colors duration-300 ease-in-out transform hover:scale-105`}
+          >
             Frontend Web Developer Practice
           </h2>
           <p
@@ -46,7 +58,13 @@ const Experience = ({ darkMode }) => {
             with back-end services.
           </p>
 
-          <h2 className="title-font font-bold sm:text-2xl mb-2 hover:text-[#a68f5f] transition-colors duration-300 ease-in-out transform hover:scale-105">
+          <h2
+            className={`title-font font-bold sm:text-2xl mb-2 ${
+              darkMode
+                ? "text-white hover:text-gray-400"
+                : "text-gray-900 hover:text-[#a68f5f]"
+            } transition-colors duration-300 ease-in-out transform hover:scale-105`}
+          >
             Freelance Web Developer
           </h2>
           <p
