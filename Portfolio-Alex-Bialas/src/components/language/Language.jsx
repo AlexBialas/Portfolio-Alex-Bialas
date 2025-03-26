@@ -1,12 +1,15 @@
 import React from "react";
 import engImage from "../language/eng.png";
+import deImage from "../language/de.png";
+import spImage from "../language/spain.png";
+import plImage from "../language/pl.png";
 
 export default function Language({ darkMode }) {
   const languages = [
     { code: "En", name: "English", level: "C1", image: engImage },
-    { code: "De", name: "German", level: "C1", image: engImage },
-    { code: "Sp", name: "Spanish", level: "A1", image: engImage },
-    { code: "PL", name: "Polish", level: "C2", image: engImage },
+    { code: "De", name: "German", level: "C1", image: deImage },
+    { code: "Sp", name: "Spanish", level: "A1", image: spImage },
+    { code: "PL", name: "Polish", level: "C2", image: plImage },
   ];
 
   return (
@@ -23,7 +26,7 @@ export default function Language({ darkMode }) {
           darkMode
             ? "text-white hover:text-gray-400"
             : "text-gray-900 hover:text-[#a68f5f]"
-        } leading-snug mb-6 hover:text-[#a68f5f] transition-all duration-300 ease-in-out transform hover:scale-105`}
+        } leading-snug mb-6 transition-all duration-300 ease-in-out transform hover:scale-105`}
       >
         Languages
       </h1>
@@ -32,8 +35,10 @@ export default function Language({ darkMode }) {
           <div key={index} className="achievement flex flex-col items-center">
             <div className="relative group">
               <div
-                className={`circle w-20 h-20 md:w-16 md:h-16 rounded-full relative flex items-center justify-center text-lg md:text-xl font-bold mb-6 md:mb-8 shadow-lg ${
-                  darkMode ? "bg-gray-700" : "bg-white"
+                className={`w-20 h-20 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mb-6 md:mb-8 shadow-lg ${
+                  darkMode
+                    ? "bg-gray-700"
+                    : "bg-gradient-to-b from-[#c2b69b] via-[#b09a73] to-[#a68f5f]"
                 }`}
               >
                 <span
@@ -44,20 +49,20 @@ export default function Language({ darkMode }) {
                   {language.code}
                 </span>
                 <div
-                  className={`absolute top-0 left-0 right-0 bottom-0 rounded-full ${
+                  className={`absolute rounded-full ${
                     darkMode
                       ? "bg-gradient-to-b from-gray-600 via-gray-500 to-gray-400"
                       : "bg-gradient-to-b from-[#c2b69b] via-[#b09a73] to-[#a68f5f]"
-                  } shadow-XLs z-0`}
+                  } shadow-2xl z-0`}
                 ></div>
               </div>
 
               {language.code === "En" && (
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-[-16%]">
                   <img
                     src={language.image}
-                    alt="English Language"
-                    className="w-full h-full rounded-full object-cover"
+                    alt={`${language.name} Language`}
+                    className="w-20 h-16 rounded-full"
                   />
                 </div>
               )}

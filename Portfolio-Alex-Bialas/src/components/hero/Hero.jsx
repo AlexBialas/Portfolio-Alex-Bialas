@@ -1,30 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import hi from "../../assets/hi.jpeg";
 import CV from "./CV.pdf";
 
 const Hero = ({ darkMode }) => {
   const roleText = "Full Stack Developer";
   const fullName = "Aleksandra Bialas";
-  const [displayText, setDisplayText] = useState("");
-  const indexRef = useRef(0);
-  const typingTimeoutRef = useRef(null);
+  const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    const typingSpeed = 100;
+    const timer = setTimeout(() => {
+      setFadeIn(true);
+    }, 250); // Delay before the text fades in
 
-    const typeCharacter = () => {
-      if (indexRef.current < fullName.length) {
-        setDisplayText((prev) => prev + fullName.charAt(indexRef.current));
-        indexRef.current++;
-        typingTimeoutRef.current = setTimeout(typeCharacter, typingSpeed);
-      } else {
-        clearTimeout(typingTimeoutRef.current);
-      }
-    };
-
-    typeCharacter();
-
-    return () => clearTimeout(typingTimeoutRef.current);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -33,19 +21,17 @@ const Hero = ({ darkMode }) => {
         darkMode ? "" : ""
       }`}
     >
-      <section
-        data-aos="fade-up"
-        data-aos-delay="250"
-        className="text-black body-font z-10"
-      >
+      <section data-aos="fade-up" className="text-black body-font z-10">
         <div className="container mx-auto flex flex-col md:flex-row items-center h-full">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center relative">
             <h1
               className={`title-font sm:text-5xl text-5xl mb-1 font-bold ${
                 darkMode ? "text-white" : "text-black"
+              } transition-transform duration-500 ${
+                fadeIn ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
             >
-              {displayText}
+              {fullName}
             </h1>
             <h2
               className={`title-font sm:text-3xl text-3xl mb-4 font-semibold ${
@@ -59,12 +45,12 @@ const Hero = ({ darkMode }) => {
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
-              As a Full Stack Web Developer, I completed an intensive MERN stack
-              training at the Digital Career Institute. With a background in
-              project management from Merito University, I excel in planning and
-              resource allocation. My experience includes creating responsive
-              UIs during my internship at IdoMods and delivering high-quality
-              freelance projects that meet client needs.
+              As a Full Stack Developer specializing in the MERN (MongoDB,
+              Express.js, React.js, Node.js) stack, I blend technical expertise
+              with a strategic mindset honed through my Master's degree in
+              Project Management. This unique combination empowers me to not
+              only craft robust and scalable web applications but also to ensure
+              that projects are delivered on time and within budget.
             </p>
             <p
               className={`mb-8 leading-relaxed text-lg max-w-4xl mx-auto text-left ${
