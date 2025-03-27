@@ -60,12 +60,12 @@ const skillsData = {
 
 const SkillCard = ({ skill, darkMode }) => (
   <div
-    className={`flex flex-col items-center justify-center w-40 h-40 mb-1 mx-0.5 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-xl ${
+    className={`flex flex-col items-center justify-center w-32 h-32 sm:w-40 sm:h-40 mb-1 mx-0.5 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-110 hover:shadow-xl ${
       darkMode ? "bg-gray-700" : "bg-[#eaeaea]/20"
     }`}
   >
     <div
-      className={`flex items-center justify-center w-24 h-24 mb-2  overflow-hidden ${
+      className={`flex items-center justify-center w-24 h-24 mb-2 overflow-hidden ${
         darkMode ? "border-gray-600" : "border-gray-300"
       }`}
     >
@@ -76,7 +76,7 @@ const SkillCard = ({ skill, darkMode }) => (
       />
     </div>
     <p
-      className={`font-semibold text-center text-lg ${
+      className={`font-semibold text-center text-sm sm:text-lg ${
         darkMode ? "text-white" : "text-black"
       }`}
     >
@@ -87,19 +87,17 @@ const SkillCard = ({ skill, darkMode }) => (
 
 const SoftSkillCard = ({ title, description, imgSrc, darkMode }) => (
   <div
-    className={`rounded-lg shadow-lg m-6 flex flex-col items-center transition-shadow duration-300 hover:shadow-xl h-150 w-250 ${
+    className={`rounded-lg shadow-lg m-6 flex flex-col items-center transition-shadow duration-300 hover:shadow-xl h-auto w-full sm:h-150 sm:w-250 ${
       darkMode ? "bg-gray-800" : "bg-white/20"
     }`}
   >
     <img
       src={imgSrc}
       alt={title}
-      className={`w-120 h-120 mb-9 p-9 rounded-[50px] transition-transform duration-300 transform hover:scale-105 ${
-        darkMode ? "" : ""
-      }`}
+      className={`w-60 h-60 sm:w-60 sm:h-60 md:w-100 md:h-100 mb-9 pt-9 p-4 rounded-[50px] transition-transform duration-300 transform hover:scale-105`}
     />
     <h3
-      className={`text-lg font-semibold hover:text-[#a68f5f] ${
+      className={`text-base sm:text-lg md:text-xl font-semibold hover:text-[#a68f5f] ${
         darkMode
           ? "text-white hover:text-gray-400"
           : "text-gray-900 hover:text-[#a68f5f]"
@@ -107,7 +105,11 @@ const SoftSkillCard = ({ title, description, imgSrc, darkMode }) => (
     >
       {title}
     </h3>
-    <p className={`text-center ${darkMode ? "text-white " : "text-gray-900 "}`}>
+    <p
+      className={`text-center text-sm sm:text-base md:text-lg ${
+        darkMode ? "text-white py-1" : "text-gray-900 py-7"
+      }`}
+    >
       {description}
     </p>
   </div>
@@ -187,7 +189,7 @@ const Skills = ({ darkMode }) => {
 
         <div className="mb-10 text-center">
           <h2
-            className={`text-2xl font-bold leading-snug mb-6  transition-all duration-300 ease-in-out transform hover:scale-105 ${
+            className={`text-2xl font-bold leading-snug mb-6 transition-all duration-300 ease-in-out transform hover:scale-105 ${
               darkMode
                 ? "text-white hover:text-gray-400"
                 : "text-gray-900 hover:text-[#a68f5f]"
@@ -210,7 +212,11 @@ const Skills = ({ darkMode }) => {
               {category}
             </h2>
             <div className="overflow-hidden relative w-full max-w-[1000px] mx-auto">
-              <div className="whitespace-nowrap flex animate-scroll gap-6 ">
+              <div
+                className={`whitespace-nowrap flex gap-4 sm:gap-6 ${
+                  window.innerWidth < 640 ? "flex-wrap" : "animate-scroll"
+                }`}
+              >
                 {skills.map((skill) => (
                   <SkillCard
                     key={skill.name}
