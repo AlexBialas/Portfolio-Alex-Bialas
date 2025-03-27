@@ -94,7 +94,7 @@ const SoftSkillCard = ({ title, description, imgSrc, darkMode }) => (
     <img
       src={imgSrc}
       alt={title}
-      className={`w-60 h-60 sm:w-60 sm:h-60 md:w-100 md:h-100 mb-9 pt-9 p-4 rounded-[50px] transition-transform duration-300 transform hover:scale-105`}
+      className={`w-60 h-60 sm:w-60 sm:h-60 md:w-100 md:h-100 mb-9 pt-9 p-4 rounded-[20px] transition-transform duration-300 transform hover:scale-105`}
     />
     <h3
       className={`text-base sm:text-lg md:text-xl font-semibold hover:text-[#a68f5f] ${
@@ -213,9 +213,7 @@ const Skills = ({ darkMode }) => {
             </h2>
             <div className="overflow-hidden relative w-full max-w-[1000px] mx-auto">
               <div
-                className={`flex justify-center flex-wrap gap-4 sm:gap-6 ${
-                  window.innerWidth < 640 ? "flex-wrap" : "animate-scroll"
-                }`}
+                className={`flex justify-center flex-wrap gap-4 sm:gap-6 animate-scroll`}
               >
                 {skills.map((skill) => (
                   <SkillCard
@@ -240,6 +238,11 @@ const Skills = ({ darkMode }) => {
           }
           .animate-scroll {
             animation: scroll 15s linear infinite;
+          }
+          @media (max-width: 640px) {
+            .animate-scroll {
+              animation: scroll 10s linear infinite; /* Faster for smaller screens */
+            }
           }
         `}</style>
       </div>
