@@ -15,11 +15,11 @@ const Hero = ({ darkMode, translations }) => {
 
   return (
     <div
-      className={`relative overflow-hidden h-screen flex items-center justify-center ${
+      className={`relative overflow-hidden h-full flex items-center justify-center pt-45 pb-45 ${
         darkMode ? "" : ""
       }`}
     >
-      <section data-aos="fade-up" className="text-black body-font z-10">
+      <section data-aos="fade-up" className="text-black body-font z-10 ">
         <div className="container mx-auto flex flex-col md:flex-row items-center h-full">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center relative">
             <h1
@@ -39,14 +39,14 @@ const Hero = ({ darkMode, translations }) => {
               {translations.hero.roleText}
             </h2>
             <p
-              className={`mb-4 leading-relaxed text-lg max-w-4xl mx-auto text-left ${
+              className={`mb-4 leading-relaxed text-lg max-w-4xl mx-auto text-left pl-10 pr-10 ${
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
               {translations.hero.introduction}
             </p>
             <p
-              className={`mb-8 leading-relaxed text-lg max-w-4xl mx-auto text-left ${
+              className={`mb-8 leading-relaxed text-lg max-w-4xl mx-auto text-left pl-10 pr-10 ${
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
