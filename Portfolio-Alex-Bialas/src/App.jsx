@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import translations from "../src/components/translations/Translations";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,8 +24,14 @@ const App = () => {
   };
 
   const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === "en" ? "pl" : "en"));
+    setLanguage((prevLang) => {
+      if (prevLang === "en") return "de";
+      if (prevLang === "de") return "en";
+      return "en";
+    });
   };
+
+  const currentTranslations = translations[language];
 
   return (
     <main
@@ -38,13 +45,14 @@ const App = () => {
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
         toggleLanguage={toggleLanguage}
+        translations={currentTranslations}
       />
-      <Hero darkMode={darkMode} />
-      <Skills darkMode={darkMode} />
-      <Experience darkMode={darkMode} />
-      <Language darkMode={darkMode} />
-      <Projects darkMode={darkMode} />
-      <Contact darkMode={darkMode} />
+      <Hero darkMode={darkMode} translations={currentTranslations} />
+      <Skills darkMode={darkMode} translations={currentTranslations} />
+      <Experience darkMode={darkMode} translations={currentTranslations} />
+      <Language darkMode={darkMode} translations={currentTranslations} />
+      <Projects darkMode={darkMode} translations={currentTranslations} />
+      <Contact darkMode={darkMode} translations={currentTranslations} />
       <Footer darkMode={darkMode} />
     </main>
   );

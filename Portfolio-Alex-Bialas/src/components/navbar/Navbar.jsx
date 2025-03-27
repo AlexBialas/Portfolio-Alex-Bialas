@@ -1,13 +1,18 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaMoon, FaGlobe } from "react-icons/fa";
 
-export default function Navbar({ darkMode, toggleDarkMode, toggleLanguage }) {
+export default function Navbar({
+  darkMode,
+  toggleDarkMode,
+  toggleLanguage,
+  translations,
+}) {
   const listNavbar = [
-    { name: "Home", link: "#home" },
-    { name: "Skills", link: "#skills" },
-    { name: "Experience", link: "#experience" },
-    { name: "Language", link: "#language" },
-    { name: "Projects", link: "#projects" },
+    { name: translations.navbar.home, link: "#home" },
+    { name: translations.navbar.skills, link: "#skills" },
+    { name: translations.navbar.experience, link: "#experience" },
+    { name: translations.navbar.language, link: "#language" },
+    { name: translations.navbar.projects, link: "#projects" },
   ];
 
   return (

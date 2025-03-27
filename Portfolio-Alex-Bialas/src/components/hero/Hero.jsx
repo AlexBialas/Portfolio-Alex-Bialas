@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import hi from "../../assets/hi.jpeg";
 import CV from "./CV.pdf";
 
-const Hero = ({ darkMode }) => {
-  const roleText = "Full Stack Developer";
-  const fullName = "Aleksandra Bialas";
+const Hero = ({ darkMode, translations }) => {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
@@ -31,37 +29,28 @@ const Hero = ({ darkMode }) => {
                 fadeIn ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
             >
-              {fullName}
+              {translations.hero.fullName}
             </h1>
             <h2
               className={`title-font sm:text-3xl text-3xl mb-4 font-semibold ${
                 darkMode ? "text-white" : "text-black"
               }`}
             >
-              {roleText}
+              {translations.hero.roleText}
             </h2>
             <p
               className={`mb-4 leading-relaxed text-lg max-w-4xl mx-auto text-left ${
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
-              As a Full Stack Developer specializing in the MERN (MongoDB,
-              Express.js, React.js, Node.js) stack, I blend technical expertise
-              with a strategic mindset honed through my Master's degree in
-              Project Management. This unique combination empowers me to not
-              only craft robust and scalable web applications but also to ensure
-              that projects are delivered on time and within budget.
+              {translations.hero.introduction}
             </p>
             <p
               className={`mb-8 leading-relaxed text-lg max-w-4xl mx-auto text-left ${
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
-              I am fluent in English and German, and I speak a little Spanish,
-              just enough to order tacos! 🌮 Outside of coding, I enjoy
-              traveling, cooking, and motorcycle racing. <br /> <br />
-              Feel free to explore my portfolio, and{" "}
-              <strong>let’s create something amazing together! 🚀</strong>
+              {translations.hero.hobbies}
             </p>
             <div className="flex justify-center space-x-4">
               <a href={CV} download>
@@ -72,7 +61,8 @@ const Hero = ({ darkMode }) => {
                       : "bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] text-black"
                   } border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer`}
                 >
-                  <span className="mr-2">📄</span> Download CV
+                  <span className="mr-2">📄</span>{" "}
+                  {translations.hero.downloadCV}
                 </button>
               </a>
               <a href="#contact">
@@ -83,36 +73,28 @@ const Hero = ({ darkMode }) => {
                       : "bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f]"
                   } border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer`}
                 >
-                  <span className="mr-2">📬</span> Contact Me
+                  <span className="mr-2">📬</span>
+                  {translations.hero.contactMe}
                 </button>
               </a>
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-10 md:mt-0 flex justify-center">
             <div className="relative overflow-hidden rounded-full w-96 h-96 p-1 border-8 animate-border-gradient">
-              {/* Softer gradient animation */}
               <style>
-                {`
-                  @keyframes border-gradient {
-                    0% {
-                      border-color: #d6c6b8; /* cream */
-                    }
-                    50% {
-                      border-color: #f5f5f5; /* light gray */
-                    }
-                    100% {
-                      border-color: #d6c6b8; /* cream */
-                    }
-                  }
-                  .animate-border-gradient {
-                    animation: border-gradient 6s ease-in-out infinite; /* smoother transition */
-                  }
-                `}
+                {` 
+                                @keyframes border-gradient { 
+                                    0% { border-color: #d6c6b8; /* cream */ } 
+                                    50% { border-color: #f5f5f5; /* light gray */ } 
+                                    100% { border-color: #d6c6b8; /* cream */ } 
+                                } 
+                                .animate-border-gradient { animation: border-gradient 6s ease-in-out infinite; /* smoother transition */ } 
+                                `}
               </style>
               <img
                 src={hi}
                 alt="Portrait of Aleksandra Bialas"
-                className="object-cover object-center rounded-full w-full h-full shadow-lg transition-transform duration-500 hover:scale-110"
+                className="object-cover object-center rounded-full w-full h-full shadow-lg "
               />
             </div>
           </div>
