@@ -42,9 +42,9 @@ export default function Language({ darkMode }) {
                 }`}
               >
                 <span
-                  className={`z-10 ${
-                    language.code === "En" ? "group-hover:hidden" : ""
-                  } ${darkMode ? "text-gray-300" : "text-black"}`}
+                  className={`z-10 transition-opacity duration-300 ${
+                    darkMode ? "text-gray-300" : "text-black"
+                  } group-hover:opacity-0`}
                 >
                   {language.code}
                 </span>
@@ -57,15 +57,13 @@ export default function Language({ darkMode }) {
                 ></div>
               </div>
 
-              {language.code === "En" && (
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-[-16%]">
-                  <img
-                    src={language.image}
-                    alt={`${language.name} Language`}
-                    className="w-20 h-16 rounded-full"
-                  />
-                </div>
-              )}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-[-16%]">
+                <img
+                  src={language.image}
+                  alt={`${language.name} Language`}
+                  className="w-20 h-16 rounded-full"
+                />
+              </div>
             </div>
             <span
               className={`text-xl md:text-xl ${
