@@ -213,7 +213,7 @@ const Skills = ({ darkMode }) => {
             </h2>
             <div className="overflow-hidden relative w-full max-w-[1000px] mx-auto">
               <div
-                className={`whitespace-nowrap flex gap-4 sm:gap-6 ${
+                className={`flex justify-center flex-wrap gap-4 sm:gap-6 ${
                   window.innerWidth < 640 ? "flex-wrap" : "animate-scroll"
                 }`}
               >
