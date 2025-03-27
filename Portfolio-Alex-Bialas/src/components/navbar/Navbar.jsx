@@ -25,12 +25,12 @@ export default function Navbar({
         <a className="flex title-font font-medium items-center mb-4 md:mb-0">
           <span className="ml-3 text-3xl font-bold">Portfolio</span>
         </a>
-        <nav className="md:ml-auto text-base md:mr-auto flex flex-wrap items-center justify-center">
+        <nav className="md:ml-auto text-base md:mr-auto flex flex-wrap items-center justify-center mb-4">
           {listNavbar.map((item, index) => (
             <a
               key={index}
               href={item.link}
-              className={`mr-5 text-xl transition duration-300 p-2 rounded-lg shadow ${
+              className={`mr-5 text-xl transition duration-300 p-2 rounded-lg shadow mb-4 ${
                 darkMode
                   ? "bg-gradient-to-r from-gray-800 to-gray-600 shadow-lg text-white p-2 hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl"
                   : "hover:bg-gray-200 hover:bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f]"
