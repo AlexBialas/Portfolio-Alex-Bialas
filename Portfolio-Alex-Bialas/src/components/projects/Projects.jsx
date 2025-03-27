@@ -63,13 +63,13 @@ export default function Projects({ darkMode }) {
   ];
 
   const customArrowStyle = {
-    width: "40px",
-    height: "40px",
+    width: "60px",
+    height: "60px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: "black",
-    fontSize: "24px",
+    color: "red",
+    fontSize: "36px",
     zIndex: 1,
     cursor: "pointer",
   };

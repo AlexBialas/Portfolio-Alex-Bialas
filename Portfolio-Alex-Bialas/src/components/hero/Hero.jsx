@@ -10,7 +10,7 @@ const Hero = ({ darkMode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeIn(true);
-    }, 250); // Delay before the text fades in
+    }, 250);
 
     return () => clearTimeout(timer);
   }, []);
@@ -59,8 +59,8 @@ const Hero = ({ darkMode }) => {
             >
               I am fluent in English and German, and I speak a little Spanish,
               just enough to order tacos! 🌮 Outside of coding, I enjoy
-              traveling, cooking, and motorcycle racing. <br /> <br /> Feel free
-              to explore my portfolio, and{" "}
+              traveling, cooking, and motorcycle racing. <br /> <br />
+              Feel free to explore my portfolio, and{" "}
               <strong>let’s create something amazing together! 🚀</strong>
             </p>
             <div className="flex justify-center space-x-4">
@@ -89,11 +89,32 @@ const Hero = ({ darkMode }) => {
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-10 md:mt-0 flex justify-center">
-            <img
-              src={hi}
-              alt="Portrait of Aleksandra Bialas"
-              className="object-cover object-center rounded-full w-96 h-96 shadow-lg transition-transform duration-500 hover:scale-110"
-            />
+            <div className="relative overflow-hidden rounded-full w-96 h-96 p-1 border-8 animate-border-gradient">
+              {/* Softer gradient animation */}
+              <style>
+                {`
+                  @keyframes border-gradient {
+                    0% {
+                      border-color: #d6c6b8; /* cream */
+                    }
+                    50% {
+                      border-color: #f5f5f5; /* light gray */
+                    }
+                    100% {
+                      border-color: #d6c6b8; /* cream */
+                    }
+                  }
+                  .animate-border-gradient {
+                    animation: border-gradient 6s ease-in-out infinite; /* smoother transition */
+                  }
+                `}
+              </style>
+              <img
+                src={hi}
+                alt="Portrait of Aleksandra Bialas"
+                className="object-cover object-center rounded-full w-full h-full shadow-lg transition-transform duration-500 hover:scale-110"
+              />
+            </div>
           </div>
         </div>
       </section>
