@@ -36,6 +36,8 @@ Enjoy smooth animations that bring the portfolio to life, making navigation enga
 - **Webpack**: A robust module bundler that optimizes the application for production.
 
 
+
+
   
 
 
