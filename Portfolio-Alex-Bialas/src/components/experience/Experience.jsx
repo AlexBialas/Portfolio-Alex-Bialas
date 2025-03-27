@@ -21,10 +21,10 @@ const Experience = ({ darkMode }) => {
         <div
           data-aos="fade-left"
           data-aos-delay="400"
-          className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center"
+          className="lg:flex-grow md:w-1/2 lg:pl-8 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center "
         >
           <h1
-            className={`text-4xl font-black leading-snug mb-6 ${
+            className={`text-4xl font-black leading-snug mb-6 pt-9 ${
               darkMode
                 ? "text-white hover:text-gray-400"
                 : "text-gray-900 hover:text-[#a68f5f]"
