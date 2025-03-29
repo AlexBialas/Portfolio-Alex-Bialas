@@ -1,12 +1,12 @@
 import React from "react";
 
-const Footer = ({ darkMode }) => {
+const Footer = ({ darkMode, translations }) => {
   const listNavbar = [
-    { name: "Home", link: "#" },
-    { name: "Skills", link: "#skills" },
-    { name: "Experience", link: "#experience" },
-    { name: "Language", link: "#language" },
-    { name: "Projects", link: "#projects" },
+    { name: translations.footer.home, link: "#" },
+    { name: translations.footer.skills, link: "#skills" },
+    { name: translations.footer.experience, link: "#experience" },
+    { name: translations.footer.language, link: "#language" },
+    { name: translations.footer.projects, link: "#projects" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Footer = ({ darkMode }) => {
     >
       <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col md:flex-row items-center justify-between">
         <span className="text-sm sm:text-center mb-4 md:mb-0">
-          Aleksandra Bialas{" "}
+          {translations.footer.copyright}{" "}
           <a href="#" className="hover:underline">
             2025
           </a>

@@ -17,6 +17,14 @@ const translations = {
       downloadCV: "Download CV",
       contactMe: "Contact Me",
     },
+    footer: {
+      copyright: "Aleksandra Bialas",
+      home: "Home",
+      skills: "Skills",
+      experience: "Experience",
+      language: "Languages",
+      projects: "Projects",
+    },
   },
   de: {
     navbar: {
@@ -35,6 +43,14 @@ const translations = {
         "Ich spreche fließend Englisch und Deutsch und ein wenig Spanisch – gerade genug, um Tacos zu bestellen! 🌮 Neben dem Programmieren reise ich gerne, koche und fahre Motorradrennen. Fühlen Sie sich frei, mein Portfolio zu erkunden, und lassen Sie uns gemeinsam etwas Großartiges schaffen! 🚀",
       downloadCV: "CV herunterladen",
       contactMe: "Kontaktiere mich",
+    },
+    footer: {
+      copyright: "Aleksandra Bialas",
+      home: "Startseite",
+      skills: "Fähigkeiten",
+      experience: "Erfahrung",
+      language: "Sprachen",
+      projects: "Projekte",
     },
   },
 };

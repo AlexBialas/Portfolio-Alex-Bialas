@@ -53,7 +53,7 @@ const App = () => {
       <Language darkMode={darkMode} translations={currentTranslations} />
       <Projects darkMode={darkMode} translations={currentTranslations} />
       <Contact darkMode={darkMode} translations={currentTranslations} />
-      <Footer darkMode={darkMode} />
+      <Footer darkMode={darkMode} translations={currentTranslations} />{" "}
     </main>
   );
 };
