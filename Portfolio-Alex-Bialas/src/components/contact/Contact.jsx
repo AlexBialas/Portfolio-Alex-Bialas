@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Contact({ darkMode }) {
+export default function Contact({ darkMode, translations }) {
   return (
     <section id="contact" data-aos="fade-up" data-aos-delay="400">
       <div
@@ -17,7 +17,7 @@ export default function Contact({ darkMode }) {
               : "text-gray-900 hover:text-[#a68f5f]"
           } transition-all duration-300 ease-in-out transform hover:scale-105`}
         >
-          Contact Me
+          {translations.contact.title}
         </h1>
         <form
           action="https://formsubmit.io/send/aleksandrabialas94@gmail.com"
@@ -29,7 +29,7 @@ export default function Contact({ darkMode }) {
               htmlFor="email"
               className="block mb-2 text-lg md:text-xl font-medium"
             >
-              Email
+              {translations.contact.email}
             </label>
             <input
               type="email"
@@ -37,7 +37,7 @@ export default function Contact({ darkMode }) {
               className={`shadow-sm font-bold border ${
                 darkMode ? "border-white text-white" : "border-black text-black"
               } text-sm md:text-base rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 placeholder:text-gray-400`}
-              placeholder="name@exemple.com"
+              placeholder={translations.contact.emailPlaceholder}
               required
             />
           </div>
@@ -46,7 +46,7 @@ export default function Contact({ darkMode }) {
               htmlFor="message"
               className="block mb-2 text-lg md:text-xl font-medium"
             >
-              Message
+              {translations.contact.message}
             </label>
             <textarea
               rows="6"
@@ -54,7 +54,7 @@ export default function Contact({ darkMode }) {
               className={`shadow-sm font-bold border ${
                 darkMode ? "border-white text-white" : "border-black text-black"
               } text-sm md:text-base rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 placeholder:text-gray-400`}
-              placeholder="Leave a comment ..."
+              placeholder={translations.contact.messagePlaceholder}
               required
             />
           </div>
@@ -65,7 +65,7 @@ export default function Contact({ darkMode }) {
                 : "bg-gradient-to-r from-[#c2b69b] via-[#b09a73] to-[#a68f5f] text-black"
             } border-0 py-2 px-6 focus:outline-none hover:bg-gradient-to-l hover:shadow-lg shadow hover:shadow-xl rounded-lg text-lg md:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer`}
           >
-            Send Message
+            {translations.contact.sendButton}
           </button>
         </form>
       </div>

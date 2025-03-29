@@ -7,31 +7,31 @@ import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.png";
 
-export default function Projects({ darkMode }) {
+export default function Projects({ darkMode, translations }) {
   const frontendProjects = [
     {
       id: 1,
       image: image,
-      title: "Frontend Project 1",
-      description: "Description for frontend project 1",
+      title: `${translations.projects.frontend.title} 1`,
+      description: `${translations.projects.frontend.description} 1`,
     },
     {
       id: 2,
       image: image2,
-      title: "Frontend Project 2",
-      description: "Description for frontend project 2",
+      title: `${translations.projects.frontend.title} 2`,
+      description: `${translations.projects.frontend.description} 2`,
     },
     {
       id: 3,
       image: image3,
-      title: "Frontend Project 3",
-      description: "Description for frontend project 3",
+      title: `${translations.projects.frontend.title} 3`,
+      description: `${translations.projects.frontend.description} 3`,
     },
     {
       id: 4,
       image: image4,
-      title: "Frontend Project 4",
-      description: "Description for frontend project 4",
+      title: `${translations.projects.frontend.title} 4`,
+      description: `${translations.projects.frontend.description} 4`,
     },
   ];
 
@@ -39,26 +39,26 @@ export default function Projects({ darkMode }) {
     {
       id: 1,
       image: image,
-      title: "Full-stack Project 1",
-      description: "Description for full-stack project 1",
+      title: `${translations.projects.fullstack.title} 1`,
+      description: `${translations.projects.fullstack.description} 1`,
     },
     {
       id: 2,
       image: image2,
-      title: "Full-stack Project 2",
-      description: "Description for full-stack project 2",
+      title: `${translations.projects.fullstack.title} 2`,
+      description: `${translations.projects.fullstack.description} 2`,
     },
     {
       id: 3,
       image: image3,
-      title: "Full-stack Project 3",
-      description: "Description for full-stack project 3",
+      title: `${translations.projects.fullstack.title} 3`,
+      description: `${translations.projects.fullstack.description} 3`,
     },
     {
       id: 4,
       image: image4,
-      title: "Full-stack Project 4",
-      description: "Description for full-stack project 4",
+      title: `${translations.projects.fullstack.title} 4`,
+      description: `${translations.projects.fullstack.description} 4`,
     },
   ];
 
@@ -164,11 +164,19 @@ export default function Projects({ darkMode }) {
               : "text-gray-900 hover:text-[#a68f5f]"
           }`}
         >
-          My Projects
+          {translations.projects.title}
         </h1>
-        {renderSlider(frontendProjects, "Frontend Projects", "fade-left")}
+        {renderSlider(
+          frontendProjects,
+          translations.projects.frontend.category,
+          "fade-left"
+        )}
         <div className="pt-12">
-          {renderSlider(fullstackProjects, "Full-stack Projects", "fade-right")}
+          {renderSlider(
+            fullstackProjects,
+            translations.projects.fullstack.category,
+            "fade-right"
+          )}
         </div>
       </div>
     </section>

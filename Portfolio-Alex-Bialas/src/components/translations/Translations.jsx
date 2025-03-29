@@ -1,5 +1,18 @@
 const translations = {
   en: {
+    projects: {
+      title: "My Projects",
+      frontend: {
+        category: "Frontend Projects",
+        title: "Frontend Project",
+        description: "Description for frontend project",
+      },
+      fullstack: {
+        category: "Full-stack Projects",
+        title: "Full-stack Project",
+        description: "Description for full-stack project",
+      },
+    },
     navbar: {
       home: "Home",
       skills: "Skills",
@@ -25,8 +38,29 @@ const translations = {
       language: "Languages",
       projects: "Projects",
     },
+    contact: {
+      title: "Contact Me",
+      email: "Email",
+      emailPlaceholder: "name@example.com",
+      message: "Message",
+      messagePlaceholder: "Leave a comment ...",
+      sendButton: "Send Message",
+    },
   },
   de: {
+    projects: {
+      title: "Meine Projekte",
+      frontend: {
+        category: "Frontend-Projekte",
+        title: "Frontend-Projekt",
+        description: "Beschreibung für das Frontend-Projekt",
+      },
+      fullstack: {
+        category: "Full-Stack-Projekte",
+        title: "Full-Stack-Projekt",
+        description: "Beschreibung für das Full-Stack-Projekt",
+      },
+    },
     navbar: {
       home: "Startseite",
       skills: "Fähigkeiten",
@@ -51,6 +85,14 @@ const translations = {
       experience: "Erfahrung",
       language: "Sprachen",
       projects: "Projekte",
+    },
+    contact: {
+      title: "Kontaktiere Mich",
+      email: "E-Mail",
+      emailPlaceholder: "name@beispiel.com",
+      message: "Nachricht",
+      messagePlaceholder: "Hinterlasse einen Kommentar ...",
+      sendButton: "Nachricht Senden",
     },
   },
 };

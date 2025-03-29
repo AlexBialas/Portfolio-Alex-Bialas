@@ -21,7 +21,7 @@ const Footer = ({ darkMode, translations }) => {
         <span className="text-sm sm:text-center mb-4 md:mb-0">
           {translations.footer.copyright}{" "}
           <a href="#" className="hover:underline">
-            20255
+            2025
           </a>
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
