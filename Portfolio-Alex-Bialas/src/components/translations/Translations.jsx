@@ -1,5 +1,12 @@
 const translations = {
   en: {
+    language: {
+      title: "Languages",
+      en: "English",
+      de: "German",
+      sp: "Spanish",
+      pl: "Polish",
+    },
     projects: {
       title: "My Projects",
       frontend: {
@@ -48,6 +55,13 @@ const translations = {
     },
   },
   de: {
+    language: {
+      title: "Sprachen",
+      en: "Englisch",
+      de: "Deutsch",
+      sp: "Spanisch",
+      pl: "Polnisch",
+    },
     projects: {
       title: "Meine Projekte",
       frontend: {

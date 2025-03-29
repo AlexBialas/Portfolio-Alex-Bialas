@@ -4,12 +4,17 @@ import deImage from "../language/de.png";
 import spImage from "../language/spain.png";
 import plImage from "../language/pl.png";
 
-export default function Language({ darkMode }) {
+export default function Language({ darkMode, translations }) {
   const languages = [
-    { code: "En", name: "English", level: "C1", image: engImage },
-    { code: "De", name: "German", level: "C1", image: deImage },
-    { code: "Sp", name: "Spanish", level: "A1", image: spImage },
-    { code: "PL", name: "Polish", level: "C2", image: plImage },
+    {
+      code: "En",
+      name: translations.language.en,
+      level: "C1",
+      image: engImage,
+    },
+    { code: "De", name: translations.language.de, level: "C1", image: deImage },
+    { code: "Sp", name: translations.language.sp, level: "A1", image: spImage },
+    { code: "PL", name: translations.language.pl, level: "C2", image: plImage },
   ];
 
   return (
@@ -28,7 +33,7 @@ export default function Language({ darkMode }) {
             : "text-gray-900 hover:text-[#a68f5f]"
         } leading-snug mb-6 transition-all duration-300 ease-in-out transform hover:scale-105`}
       >
-        Languages
+        {translations.language.title}
       </h1>
       <div className="grid grid-cols-2 gap-10 md:flex md:gap-20">
         {languages.map((language, index) => (
