@@ -83,21 +83,30 @@ const Hero = ({ darkMode, translations }) => {
             <div className="relative overflow-hidden rounded-full w-96 h-96 p-1 border-8 animate-border-gradient">
               <style>
                 {` 
-                                @keyframes border-gradient { 
-                                    0% { border-color: #d6c6b8; /* cream */ } 
-                                    50% { border-color: #f5f5f5; /* light gray */ } 
-                                    100% { border-color: #d6c6b8; /* cream */ } 
-                                } 
-                                .animate-border-gradient { animation: border-gradient 6s ease-in-out infinite; /* smoother transition */ } 
-                                `}
+                  @keyframes border-gradient { 
+                    0% { border-color: #d6c6b8; } 
+                    50% { border-color: #f5f5f5; } 
+                    100% { border-color: #d6c6b8; } 
+                  } 
+                  .animate-border-gradient { animation: border-gradient 6s ease-in-out infinite; } 
+                `}
               </style>
               <img
                 src={hi}
                 alt="Portrait of Aleksandra Bialas"
-                className="object-cover object-center rounded-full w-full h-full shadow-lg "
+                className="object-cover object-center rounded-full w-full h-full shadow-lg"
               />
             </div>
           </div>
+        </div>
+        <div className="flex justify-center mt-4 ml-213">
+          <p
+            className={`text-lg font-semibold ${
+              darkMode ? "text-white" : "text-black"
+            } animate-bounce`}
+          >
+            abialas.fullstack@gmail.com
+          </p>
         </div>
       </section>
     </div>
