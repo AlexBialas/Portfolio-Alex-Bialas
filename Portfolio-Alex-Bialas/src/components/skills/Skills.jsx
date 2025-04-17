@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ANGULAR from "../skills/ANGULAR.png";
 import BOOTSTRAP from "../skills/BOOTSTRAP.png";
 import CANVA from "../skills/CANVA.png";
 import CSS from "../skills/CSS.png";
@@ -17,7 +16,6 @@ import SHOPIFY from "../skills/SHOPIFY.png";
 import TAILWIND from "../skills/TAILWIND.png";
 import TS from "../skills/TS.png";
 import VITE from "../skills/VITE.png";
-import VUE from "../skills/VUE.png";
 import WORDPRESS from "../skills/WORDPRESS.png";
 import EXPRESS from "../skills/EXPRESS.png";
 import DOCKER from "../skills/docker.png";
@@ -32,8 +30,6 @@ const skillsData = {
     { src: JS, name: "JavaScript" },
     { src: REACT, name: "React" },
     { src: REDUX, name: "Redux" },
-    { src: VUE, name: "Vue" },
-    { src: ANGULAR, name: "Angular" },
     { src: TS, name: "TypeScript" },
     { src: TAILWIND, name: "Tailwind CSS" },
     { src: BOOTSTRAP, name: "Bootstrap" },
